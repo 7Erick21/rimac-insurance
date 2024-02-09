@@ -1,6 +1,7 @@
 import {
     createBrowserRouter,
     createRoutesFromElements,
+    Navigate,
     Outlet,
     Route,
 } from 'react-router-dom'
@@ -26,7 +27,7 @@ export const allRoutes = createBrowserRouter(
                     <Outlet />
                 </LayoutGeneral>
             }
-            errorElement={<div>NO HAY PAGINA</div>}
+            errorElement={<Navigate to={ROUTE_LOGIN} />}
         >
             <Route index element={<Login />} />
             <Route
